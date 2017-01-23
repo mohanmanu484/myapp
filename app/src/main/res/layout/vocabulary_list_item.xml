@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="vocabulary"
+            type="com.taykit.assignment.rxexample.vocabulary.Vocabulary" />
+    </data>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:paddingBottom="8dp"
+        app:cardCornerRadius="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivVocabulary"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:url="@{vocabulary.id}"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etVocaburayWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="16sp"
+                android:text="@={vocabulary.word}" />
+
+            <TextView
+                android:id="@+id/tvVocabularyMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="4dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@{vocabulary.meaning}" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#dfdfdf" />
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

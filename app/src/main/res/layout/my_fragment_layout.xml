@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="handlers"
+            type="com.taykit.assignment.rxexample.databinding.MyFragment" />
+
+        <variable
+            name="movie"
+            type="com.taykit.assignment.rxexample.movie.Movie" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.taykit.assignment.rxexample.databinding.DataActivity">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+        <!-- <TextView
+             android:id="@+id/tvId"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:padding="16dp"
+             android:text='@{""+movie.id}'
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <TextView
+             android:id="@+id/tvTitle"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:padding="16dp"
+             android:text='@{movie.title??""}'
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <TextView
+             android:id="@+id/tvAdault"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:padding="16dp"
+             android:text='@{movie.adult?"adult":"child"}'
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <Button
+             android:id="@+id/button"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:onClick="@{handlers::myClick}"
+             android:text="Update" />-->
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import
+            type="com.taykit.assignment.rxexample.observables.MyUtils"/>
+        <variable
+            name="obj"
+            type="com.taykit.assignment.rxexample.observables.MyViewModel" />
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_observable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context="com.taykit.assignment.rxexample.observables.ObservableActivity">
+
+        <TextView
+            android:id="@+id/result"
+            android:text='@{MyUtils.add(obj.firstNumber,obj.secondNumber)}'
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:text='@={obj.firstNumber}'
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:text='@={obj.secondNumber}'
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>
